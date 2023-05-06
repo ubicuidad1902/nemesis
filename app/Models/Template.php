@@ -36,7 +36,7 @@ class Templates
         $this->PALABRAS_CLAVE = "Página de turismo de San Miguel el Alto";
         $this->URL_ICONO = "";
         $this->URL_IMAGEN = "";
-        $this->keyCaptcha_public = $CONFIGURACION->keyCaptcha_public;
+        //$this->keyCaptcha_public = $CONFIGURACION->keyCaptcha_public;
         /* es lo que aparece cuando te buscan en google */
         /* La función del servidor ya quedó lista */
     }
@@ -88,12 +88,9 @@ class Templates
     {
         $script_Cuerpo = '<script> let RUTA = "' . $this->RUTA . '"</script>';/* dentro de java esta una variable ruta que contiene
         la variable ruta de la direccion del directorio público */
-
-
-        $script_Cuerpo .= '<script src=""></script>';
-        $script_Cuerpo .= '<script src="'.$this->RUTA.'Library/jquery/jquery.js"></script>';
-        $script_Cuerpo .= '<script src="'.$this->RUTA.'Library/popper/popper.min.js"></script>';
-        $script_Cuerpo .= '<script src="'.$this->RUTA. 'Library/bootstrap/js/bootstrap.min.js">';
+        $script_Cuerpo .= '<script src="' . $this->RUTA . 'Library/jquery/jquery.js"></script>';
+        $script_Cuerpo .= '<script src="' . $this->RUTA . 'Library/popper/popper.min.js"></script>';
+        $script_Cuerpo .= '<script src="' . $this->RUTA . 'Library/bootstrap/js/bootstrap.min.js"></script>';
         echo $script_Cuerpo;
     }
 }
